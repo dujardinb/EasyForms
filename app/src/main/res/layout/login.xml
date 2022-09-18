@@ -4,72 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_on_secondary"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
-    <EditText
-        android:id="@+id/email"
+    <ImageView
+        android:id="@+id/img_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="55dp"
+        android:contentDescription="image password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_email"
+        app:srcCompat="@drawable/baseline_lock_24" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="260dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:contentDescription="logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_easy_forms" />
+
+    <TextView
+        android:id="@+id/tv_seconnecter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_edit_text"
-        android:drawableStart="@drawable/baseline_alternate_email_24"
-        android:drawablePadding="5dp"
+        android:clickable="false"
+        android:text="Se connecter"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/adresse_email"
+        android:hint="Adresse mail"
         android:importantForAutofill="no"
-        android:inputType="text|textEmailAddress"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:singleLine="true"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/img_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seconnecter" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/ed_password"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:drawableEnd="@drawable/baseline_visibility_off_24"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_password"
+        app:layout_constraintTop_toBottomOf="@+id/ed_email" />
+
+    <ImageView
+        android:id="@+id/img_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="image email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seconnecter"
+        app:srcCompat="@drawable/baseline_alternate_email_24" />
+
+    <Button
+        android:id="@+id/bt_connect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_edit_text"
-        android:drawableStart="@drawable/baseline_lock_24"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/mot_de_passe"
-        android:importantForAutofill="no"
-        android:inputType="text|textPassword"
-        android:minHeight="48dp"
-        android:singleLine="true"
-        android:textColorHint="#757575"
+        android:textStyle="bold"
+        android:text="Se connecter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_password" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="347dp"
-        android:layout_height="72dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/easy_forms"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_connect">
+        <View
+            android:layout_marginEnd="2dp"
+            android:id="@+id/divider1"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/darkgray"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
 
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:background="@null"
+            android:text="OU"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_marginStart="2dp"
+            android:id="@+id/divider2"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/darkgray" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
