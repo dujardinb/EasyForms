@@ -186,13 +186,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <com.shobhitpuri.custombuttons.GoogleSignInButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:text="Se connecter avec Google"
-            app:isDarkTheme="true" />
+            android:background="@drawable/round_edit_text"
+            app:backgroundTint="@color/whitesmoke"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/google_logo"
+            android:text="Se connecter avec Google" />
 
     </LinearLayout>
 
